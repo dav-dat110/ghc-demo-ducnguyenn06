@@ -1,0 +1,97 @@
+---
+title: "GHC Demo Assignment"
+subtitle: "CSC 110 – Fall 2025"
+author: "Duc Nguyen"
+date: "10/23/2025"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    theme:
+      light: sandstone
+      dark: darkly
+  pdf: default
+---
+
+```{r setup}
+#| output: false
+library(tidyverse)
+```
+
+## Homework
+
+```{r}
+#| fig-cap: "Fuel mileage scatterplot"
+ggplot(mpg, aes(x = displ, y = hwy)) +
+geom_point(color = "blue") +
+labs(
+title = "Engine Displacement vs Highway Mileage",
+x = "Engine size (L)",
+y = "Highway MPG"
+)
+```
+
+[Davidson College](https://www.davidson.edu)
+
+* Other classes that I am taking
+  + ECO 202
+  + ECO 211
+  + COM 101
+
+1. Queen of Tears
+2. Crash Landing On You
+3. We Bare Bears
+
+Here is a footnote reference,[^1] and another.[^longnote]
+
+[^1]: Here is the footnote.
+
+[^longnote]: Here's one with multiple blocks.
+
+    Subsequent paragraphs are indented to show that they
+belong to the previous footnote.
+
+        { some.code }
+
+    The whole paragraph can be indented, or just the first
+    line.  In this way, multi-paragraph footnotes work like
+    multi-paragraph list items.
+
+
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+> Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.
+
+::: callout-note
+This is a callout note.
+::: 
+
+::: callout-tip
+This is a callout tip.
+:::
+
+::: {.callout-important collapse="true"}
+This is a callout important.
+:::
+
+{{< pagebreak >}}
+
+## Reflection
+
+One technique I found especially useful was adding a **table of contents** in Quarto. It makes long webpages much easier to navigate and gives the reader a clear overview of each section. I can see myself using this feature in the final project so viewers can jump directly to specific parts of my analysis instead of scrolling endlessly. Using a TOC also helps me think about the *hierarchy* of my sections and how to structure my arguments clearly.
+
+Another tip I enjoyed experimenting with was customizing the **theme**. Being able to switch between `light` and `dark` modes adds personality to the webpage and improves readability for different users. I learned how simple it is to change the appearance by editing the YAML header and adding a few lines of code. For my final project, I plan to choose a clean theme that matches the tone of my topic and ensures visual consistency across all pages.
+
+Finally, I liked working with **callout blocks**, especially the collapsible one. Callouts help emphasize key points or warnings without cluttering the main text. I can imagine using a `callout-important` section in my final project to highlight limitations or data caveats, and maybe a `callout-tip` for notes on how others could reproduce my analysis. This feature makes the webpage feel more interactive and professional.
+
